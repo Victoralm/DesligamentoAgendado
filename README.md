@@ -22,3 +22,18 @@ Script Python contendo uma GUI [ttk](https://docs.python.org/3/library/tkinter.t
 - Executar o script
 - Opcionalmente, pode-se criar um atalho (*.desktop) na Área de Trabalho para
   o script, em `~/.local/share/applications`
+
+#### `DeslAutom.desktop` template
+
+```bash
+#!/usr/bin/env python3
+[Desktop Entry]
+Name=Desligamento Agendado
+Comment=Python ttk GUI para agendamento do desligamento do PC
+Icon=<inserir_caminho_completo>/powerDown01.png
+Exec=python3 <inserir_caminho_completo>/AlmsDesligamentoPC.py
+Path=<inserir_caminho_completo>/
+Terminal=false
+Type=Application
+Categories=Utility;Application;
+```
