@@ -15,4 +15,4 @@ Script Python contendo uma GUI ttk para agendar o desligamento do PC em ambiente
 - `sudo apt install python3-pil.imagetk`
 - Executar o script
 - Alternativamente, pode-se criar um atalho (*.desktop) na Área de Trabalho para
-  o scrip, em `~/.local/share/applications`
+  o script, em `~/.local/share/applications`
