@@ -31,7 +31,7 @@ Script Python contendo uma GUI [ttk](https://docs.python.org/3/library/tkinter.t
 Name=Desligamento Agendado
 Comment=Python ttk GUI para agendamento do desligamento do PC
 Icon=<inserir_caminho_completo>/powerdown.png
-Exec=python3 <inserir_caminho_completo>/AlmsDesligamentoPC.py
+Exec=python3 <inserir_caminho_completo>/DesligamentoAgendado.py
 Path=<inserir_caminho_completo>/
 Terminal=false
 Type=Application
