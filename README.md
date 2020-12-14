@@ -1,5 +1,5 @@
 # Desligamento Agendado
-Script Python contendo uma GUI ttk para agendar o desligamento do PC em ambientes Windows e Linux.
+Script Python contendo uma GUI [ttk](https://docs.python.org/3/library/tkinter.ttk.html) para agendar o desligamento do PC em ambientes Windows e Linux.
 
 ## Como usar
 
