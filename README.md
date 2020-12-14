@@ -6,7 +6,8 @@ Script Python contendo uma GUI [ttk](https://docs.python.org/3/library/tkinter.t
 ### Windows 10 64b
 - Instalar o [Python](https://www.python.org/downloads/)
 - Certificar-se que este esteja nas variáveis de ambiente (seja do sistema ou do usuário)
-- No terminal, executar: `pip install pillow`
+- No terminal, executar:
+  - `pip install pillow`
 - Executar o script
 - Alternativamente, pode-se criar um atalho na Área de Trabalho para o script
 
