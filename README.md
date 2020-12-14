@@ -7,7 +7,7 @@ Script Python contendo uma GUI ttk para agendar o desligamento do PC em ambiente
 - Instalar o [Python](https://www.python.org/downloads/)
 - Certificar-se que este esteja nas variáveis de ambiente (seja do sistema ou do usuário)
 - Executar o script
-- Alternativamente, pode-se criar um atalho na Área de Trabalho para o scrip
+- Alternativamente, pode-se criar um atalho na Área de Trabalho para o script
 
 ### Ubuntu 20.04 64b
 - `sudo apt install python3`
