@@ -11,6 +11,7 @@ import platform
 from tkinter import *
 from tkinter import ttk
 from PIL import ImageTk, Image
+from idlelib.tooltip import Hovertip
 import re
 
 
@@ -53,27 +54,33 @@ class DeslPC:
         """
         horas_entry = ttk.Entry(mainframe, width=7, textvariable=self.horas,
                                 validate='key', validatecommand=check_num_wrapper)
+        Hovertip(horas_entry,"Entre somente com números.\nCaracteres alfabéticos não são permitidos.", hover_delay=500)
         horas_entry.grid(column=1, row=1, sticky=W, pady=(10, 0))
 
+
         self.minutos = StringVar()
-        ttk.Label(mainframe, text="Minutos", padding="3").grid(
-            column=2, row=1, sticky=E, pady=(10, 0))
+        minLabel = ttk.Label(mainframe, text="Minutos", padding="3")
+        minLabel.grid(column=2, row=1, sticky=E, pady=(10, 0))
         minutos_entry = ttk.Entry(mainframe, width=7, textvariable=self.minutos,
                                   validate='key', validatecommand=check_num_wrapper)
+        Hovertip(minutos_entry,"Entre somente com números.\nCaracteres alfabéticos não são permitidos.", hover_delay=500)
         minutos_entry.grid(column=3, row=1, sticky=W, pady=(10, 0))
 
         if platform.system() != 'Linux':
             self.segundos = StringVar()
-            ttk.Label(mainframe, text="Segundos", padding="3").grid(
-                column=4, row=1, sticky=E, pady=(10, 0))
+            segLabel = ttk.Label(mainframe, text="Segundos", padding="3")
+            segLabel.grid(column=4, row=1, sticky=E, pady=(10, 0))
             segundos_entry = ttk.Entry(
                 mainframe, width=7, textvariable=self.segundos, validate='key', validatecommand=check_num_wrapper)
+            Hovertip(segundos_entry,"Entre somente com números.\nCaracteres alfabéticos não são permitidos.", hover_delay=500)
             segundos_entry.grid(column=5, row=1, sticky=W, pady=(10, 0))
 
-        ttk.Button(mainframe, text="Agendar Desligamento",
-                   command=self.agendarDeslPC).grid(column=0, row=2, sticky=E, columnspan=3, pady=(25, 0))
-        ttk.Button(mainframe, text="Cancelar Desligamento",
-                   command=self.calcelarDeslPC).grid(column=3, row=2, sticky=E, columnspan=3, pady=(25, 0))
+        agdDesl = ttk.Button(mainframe, text="Agendar Desligamento", command=self.agendarDeslPC)
+        Hovertip(agdDesl,"Inicia a cronometragem para o desligamento.", hover_delay=500)
+        agdDesl.grid(column=0, row=2, sticky=E, columnspan=3, pady=(25, 0))
+        cancDesl = ttk.Button(mainframe, text="Cancelar Desligamento", command=self.calcelarDeslPC)
+        Hovertip(cancDesl, "Cancela a cronometragem de um desligamento previamente agendado.", hover_delay=500)
+        cancDesl.grid(column=3, row=2, sticky=E, columnspan=3, pady=(25, 0))
 
         root.bind("<Return>", self.agendarDeslPC)
 
@@ -82,6 +89,7 @@ class DeslPC:
         Fazendo a validação das entradas nas entries
         """
         return re.match('^[0-9]*$', newval) is not None and len(newval) <= 5
+        TooltipBase.showcontents
 
     def agendarDeslPC(self, *args):
         """
