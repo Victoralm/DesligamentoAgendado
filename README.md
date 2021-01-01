@@ -16,10 +16,7 @@ Script Python contendo uma GUI [ttk](https://docs.python.org/3/library/tkinter.t
 ### Ubuntu 20.04 64b
 
 - No Terminal, executar:
-  - `sudo apt install python3`
-  - `sudo apt install python3-pip`
-  - `sudo apt install python3-pil.imagetk`
-  - `sudo apt install idle3`
+  - `sudo apt install python3 python3-pip python3-pil.imagetk idle3`
 - Executar o script
 - Opcionalmente, pode-se criar um atalho (*.desktop) na Área de Trabalho para
   o script, em `~/.local/share/applications`
