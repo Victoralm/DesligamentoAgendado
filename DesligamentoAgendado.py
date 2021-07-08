@@ -17,15 +17,15 @@ import re
 
 class DeslPC:
 
-    horas = 0
-    minutos = 0
-    segundos = 0
-    #
-
     def __init__(self, root):
         """
         docstring
         """
+
+        self.horas = 0
+        self.minutos = 0
+        self.segundos = 0
+
         root.title("Desligamento Agendado")
 
         # Imagem no mesmo diretório do script
